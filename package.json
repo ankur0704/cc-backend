@@ -2,7 +2,7 @@
   "name": "cc_backend_pt2",
   "version": "1.0.0",
   "description": "backend(learning progress)",
-  "type": "commonjs",
+  "type": "module",
   "keywords": [
     "backend",
     "learning",
@@ -13,10 +13,15 @@
   "author": "Ankur Sonavane",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "devDependencies": {
     "nodemon": "^3.1.11",
     "prettier": "^3.7.4"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1"
   }
 }
